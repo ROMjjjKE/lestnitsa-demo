@@ -18,7 +18,7 @@
   /* ============ рендерер: киношный тон ============ */
   var canvas = document.getElementById('gl');
   var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.75));
   renderer.setSize(innerWidth, innerHeight);
   renderer.outputEncoding = THREE.sRGBEncoding;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -242,14 +242,14 @@
   sun.position.set(-3.4, 2.5, FZ1 - 0.4);
   sun.target.position.set(1.2, 0.6, -0.5);
   sun.castShadow = true;
-  sun.shadow.mapSize.set(2048, 2048);
+  sun.shadow.mapSize.set(1024, 1024);
   sun.shadow.camera.left = sun.shadow.camera.bottom = -12;
   sun.shadow.camera.right = sun.shadow.camera.top = 12;
   sun.shadow.camera.far = 30; sun.shadow.bias = -0.0004;
   scene.add(sun); scene.add(sun.target);
   var lamp = new THREE.PointLight(0xffb46a, 1.5, 9, 2); /* тёплая лампа-бра у лестницы */
   lamp.position.set(-1.6, 3.1, 1.4);
-  lamp.castShadow = true; lamp.shadow.mapSize.set(1024, 1024);
+  lamp.castShadow = true; lamp.shadow.mapSize.set(512, 512);
   scene.add(lamp);
   var topLamp = new THREE.PointLight(0xffc88a, 1.0, 8, 2); /* лампа на площадке 2 этажа */
   topLamp.position.set(0, TOP_Y + 2.0, FZ1 - 2.4);
