@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>СУПЕРЛЕСТНИЦА — лестницы на заказ · Минск · демо-макет</title>
+<meta name="description" content="Демо-макет сайта для производителя лестниц: деревянные лестницы на металлокаркасе, массив дуба/сосны, проект под ваш проём, монтаж за 1 день.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230B0C0E'/%3E%3Cpath d='M14 50h10V40h10V30h10V20h10v30z' fill='%23FF4D00'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="gl"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<div id="pre" aria-hidden="true">
+  <div class="pl">СУПЕРЛЕСТНИЦА · Минск</div>
+  <div class="pn"><span id="pn">0</span><i>%</i></div>
+  <div class="pb"><i id="pbi"></i></div>
+</div>
+
+<div id="hud"><span>01</span><em>/</em><span class="stage" id="hud-stage">Проект</span></div>
+
+<div id="scroll">
+  <section class="sec hero">
+    <div class="inner">
+      <div class="kick">Лестницы на заказ — Минск и область</div>
+      <h1><span class="ln"><span>Лестница</span></span><span class="ln"><span class="stroke">соберётся</span></span><span class="ln"><span>на <span class="a">скролле</span></span></span></h1>
+      <p class="sub">Это интерактивный демо-макет: 3D-модель лестницы собирается прямо под пальцем клиента. Массив дерева, сварной каркас, проект под ваш проём.</p>
+      <div class="hint"><i></i>Скролльте — стройка начнётся</div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="inner">
+      <span class="num">01</span>
+      <h2>Проект</h2>
+      <p>Проектируем под ваш проём: замер, 3D-визуализация, подбор материала — дуб, сосна, ольха.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="inner">
+      <span class="num">02</span>
+      <h2>Каркас</h2>
+      <p>Сварной металлокаркас — геометрия, которая не «ведётся» и держит нагрузку десятилетиями.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="inner">
+      <span class="num">03</span>
+      <h2>Ступени</h2>
+      <p>Ступени из массива дерева. Без шпона и фанеры — то, что можно шлифовать и реставрировать.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="inner">
+      <span class="num">04</span>
+      <h2>Ограждение</h2>
+      <p>Ограждения из нержавеющей стали и чёрного металла — по индивидуальным проектам.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="inner">
+      <span class="num">05</span>
+      <h2>Монтаж</h2>
+      <p>Готовые лестницы — в кратчайшие сроки. Монтаж за 1 день, гарантия на конструкцию.</p>
+    </div>
+  </section>
+
+  <section class="sec final">
+    <div class="inner">
+      <div class="kick">Ваш сайт может продавать так же</div>
+      <h2 class="big">Обсудим вашу<br><em>лестницу?</em></h2>
+      <p class="sub">Этот макет — бесплатная демонстрация того, как может выглядеть сайт вашей компании. Свяжитесь с нами — покажем, что можно сделать под ваш бренд.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#0">Обсудить проект <span class="ar">→</span></a>
+        <a class="btn" href="#0">Смотреть работы</a>
+      </div>
+      <div class="meta">
+        <div><b>1 день</b><span>монтаж</span></div>
+        <div><b>Массив</b><span>дуб · сосна · ольха</span></div>
+        <div><b>Металл</b><span>сварной каркас</span></div>
+      </div>
+      <p class="foot">Демо-макет от SiteFast.by — концепт для демонстрации возможностей</p>
+    </div>
+  </section>
+</div>
+
+<div id="nogl">Ваш браузер не поддерживает WebGL — 3D-сцена недоступна.</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
