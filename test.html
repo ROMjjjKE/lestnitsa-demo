@@ -1,0 +1,12 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>WebGL test</title></head><body style="font:16px monospace">
+<div id="r">checking...</div>
+<script>
+(function(){
+  var r = document.getElementById('r');
+  try {
+    var c = document.createElement('canvas');
+    var gl = c.getContext('webgl') || c.getContext('experimental-webgl');
+    r.textContent = gl ? ('WebGL OK: ' + gl.getParameter(gl.VERSION) + ' | ' + (gl.getParameter(gl.RENDERER)||'')) : 'WebGL context NULL';
+  } catch(e) { r.textContent = 'WebGL ERROR: ' + e.message; }
+})();
+</script></body></html>
