@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>СУПЕРЛЕСТНИЦА — кино по скроллу · демо v2</title>
+<meta name="description" content="Демо: фотореалистичный ролик сборки лестницы, управляемый скроллом (приём Apple). Макет для производителя лестниц, Минск.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230B0C0E'/%3E%3Cpath d='M14 50h10V40h10V30h10V20h10v30z' fill='%23FF4D00'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<video id="scrub" muted playsinline preload="auto">
+  <source src="scrub.mp4" type="video/mp4">
+</video>
+<div class="veil" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<div id="pre" aria-hidden="true">
+  <div class="pl">СУПЕРЛЕСТНИЦА · Минск</div>
+  <div class="pn"><span id="pn">0</span><i>%</i></div>
+  <div class="pb"><i id="pbi"></i></div>
+</div>
+
+<div id="hud"><span id="hud-num">01</span><em>/</em><span class="stage" id="hud-stage">Проект</span></div>
+
+<div id="scroll">
+  <section class="sec hero">
+    <div class="inner">
+      <div class="kick">Лестницы на заказ — Минск и область</div>
+      <h1><span class="ln"><span>Лестница</span></span><span class="ln"><span class="stroke">рождается</span></span><span class="ln"><span>на <span class="a">скролле</span></span></span></h1>
+      <p class="sub">Настоящий кадр вместо мультяшной графики: прокручивайте — и квартира обретёт лестницу. Так выглядит современный сайт: видео-кино, которым управляет палец клиента.</p>
+      <div class="hint"><i></i>Скролльте — стройка начнётся</div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="inner">
+      <span class="num">01</span>
+      <h2>Проём</h2>
+      <p>Всё начинается с замера: проём, высоты, материал. Проектируем под вашу квартиру, а не «как у всех».</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="inner">
+      <span class="num">02</span>
+      <h2>Каркас</h2>
+      <p>Сварной металлокаркас — геометрия, которая не «ведётся» и держит нагрузку десятилетиями.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="inner">
+      <span class="num">03</span>
+      <h2>Ступени</h2>
+      <p>Ступени из массива дуба и сосны. Без шпона и фанеры — то, что можно шлифовать и реставрировать.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="inner">
+      <span class="num">04</span>
+      <h2>Ограждение</h2>
+      <p>Чёрный металл и нержавейка — по индивидуальным проектам, под стиль вашей квартиры.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="inner">
+      <span class="num">05</span>
+      <h2>Готово</h2>
+      <p>Монтаж за 1 день, гарантия на конструкцию. Вечерний свет — бонус вашей новой квартире.</p>
+    </div>
+  </section>
+
+  <section class="sec final">
+    <div class="inner">
+      <div class="kick">Ваш сайт может продавать так же</div>
+      <h2 class="big">Обсудим вашу<br><em>лестницу?</em></h2>
+      <p class="sub">Этот макет — бесплатная демонстрация того, как может выглядеть сайт вашей компании. Свяжитесь с нами — покажем, что можно сделать под ваш бренд.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#0">Обсудить проект <span class="ar">→</span></a>
+        <a class="btn" href="#0">Смотреть работы</a>
+      </div>
+      <div class="meta">
+        <div><b>1 день</b><span>монтаж</span></div>
+        <div><b>Массив</b><span>дуб · сосна</span></div>
+        <div><b>Металл</b><span>сварной каркас</span></div>
+      </div>
+      <p class="foot">Демо-макет от SiteFast.by — видео-скраб по скроллу, приём Apple</p>
+    </div>
+  </section>
+</div>
+
+<script src="../js/vendor/gsap.min.js"></script>
+<script src="../js/vendor/ScrollTrigger.min.js"></script>
+<script src="../js/vendor/lenis.min.js"></script>
+<script src="scrub.js"></script>
+</body>
+</html>
