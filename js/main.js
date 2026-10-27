@@ -4,6 +4,14 @@
    текстуры дерева/штукатурки/досок, мягкие тени, тёплый вечерний свет из окна. */
 (function () {
   'use strict';
+  var dbg = document.createElement('div');
+  dbg.id = 'dbg'; dbg.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:999;background:#700;color:#fff;font:12px monospace;padding:6px;display:none;white-space:pre-wrap';
+  document.body.appendChild(dbg);
+  window.addEventListener('error', function (e) {
+    dbg.style.display = 'block';
+    dbg.textContent = 'JS ERROR: ' + (e.message || 'unknown') + ' @ line ' + (e.lineno || '?');
+  });
+  if (typeof THREE === 'undefined') { dbg.style.display='block'; dbg.textContent='THREE не загрузился (CDN)'; }
   var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function webglOK() {
